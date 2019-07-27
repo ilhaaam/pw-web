@@ -34,6 +34,10 @@ return [
     'edit_success' => 'Perubahan berhasil disimpan!',
     'remove_success' => 'Artikel telah dihapus!',
     'articles_per_page' => 'Artikel per Halaman',
-    'articles_per_page_desc' => 'Jumlah Artikel yang akan ditampilkan per Halaman.'
+    'articles_per_page_desc' => 'Jumlah Artikel yang akan ditampilkan per Halaman.',
+    'author' => 'Penulis: ',
+    'written_by' => 'Ditulis oleh:',
+    'on' => 'pada'
+    
 
 ];

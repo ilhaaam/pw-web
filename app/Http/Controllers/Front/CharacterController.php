@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Front;
 
-use Huludini\PerfectWorldAPI\API;
+use Ham\PerfectWorldAPI\API;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;

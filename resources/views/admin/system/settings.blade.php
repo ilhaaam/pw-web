@@ -47,14 +47,16 @@
                         <label class="col-md-2 control-label" for="server_version">{{ trans( 'system.server_version' ) }}</label>
                         <div class="col-md-9">
                             <select name="server_version" class="form-control" id="version">
-                                <option value="07" {{ settings( 'server_version' ) == '07' ? 'selected' : NULL }}>v07</option>
-                                <option value="63" {{ settings( 'server_version' ) == '63' ? 'selected' : NULL }}>v63</option>
-                                <option value="69" {{ settings( 'server_version' ) == '69' ? 'selected' : NULL }}>v69</option>
-                                <option value="70" {{ settings( 'server_version' ) == '70' ? 'selected' : NULL }}>v70</option>
-                                <option value="80" {{ settings( 'server_version' ) == '80' ? 'selected' : NULL }}>v80</option>
-                                <option value="85" {{ settings( 'server_version' ) == '85' ? 'selected' : NULL }}>v85</option>
-                                <option value="88" {{ settings( 'server_version' ) == '88' ? 'selected' : NULL }}>v88</option>
-                                <option value="101" {{ settings( 'server_version' ) == '101' ? 'selected' : NULL }}>v101</option>
+                                <option value="07" {{ settings( 'server_version' ) == '07' ? 'selected' : NULL }}>1.2.6 - v07</option>
+                                <option value="63" {{ settings( 'server_version' ) == '63' ? 'selected' : NULL }}>1.4.4 v63</option>
+                                <option value="69" {{ settings( 'server_version' ) == '69' ? 'selected' : NULL }}>1.4.5 v69</option>
+                                <option value="70" {{ settings( 'server_version' ) == '70' ? 'selected' : NULL }}>1.4.6 v70</option>
+                                <option value="80" {{ settings( 'server_version' ) == '80' ? 'selected' : NULL }}>1.4.6 v80</option>
+                                <option value="85" {{ settings( 'server_version' ) == '85' ? 'selected' : NULL }}>1.4.6 v85</option>
+                                <option value="88" {{ settings( 'server_version' ) == '88' ? 'selected' : NULL }}>1.4.6 v88</option>
+                                <option value="101" {{ settings( 'server_version' ) == '101' ? 'selected' : NULL }}>1.5.1 v101</option>
+                                <option value="145" {{ settings( 'server_version' ) == '145' ? 'selected' : NULL }}>1.5.3 v145</option>
+                                <option value="156" {{ settings( 'server_version' ) == '156' ? 'selected' : NULL }}>1.5.5 v156</option>
                             </select>
                             <span class="help-block">{{ trans( 'system.server_version_desc' ) }}</span>
                             <div class="form-control-focus"> </div>
@@ -68,6 +70,20 @@
                                 <option value="base64" {{ settings( 'encryption_type' ) == 'base64' ? 'selected' : NULL }}> {{ trans( 'system.encrypt.base64' ) }} </option>
                             </select>
                             <span class="help-block">{{ trans( 'system.encrypt_type_desc' ) }}</span>
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="backup_path">{{ trans( 'system.backup_path' ) }}</label>
+                        <div class="col-md-9">
+                            <input name="backup_path" type="text" class="form-control" id="backup_path" placeholder="{{ trans( 'system.backup_path' ) }}" value="{{ settings( 'backup_path' ) }}">
+                            <div class="form-control-focus"> </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-md-line-input">
+                        <label class="col-md-2 control-label" for="pwdata_path">{{ trans( 'system.pwdata_path' ) }}</label>
+                        <div class="col-md-9">
+                            <input name="pwdata_path" type="text" class="form-control" id="pwdata_path" placeholder="{{ trans( 'system.pwdata_path' ) }}" value="{{ settings( 'pwdata_path' ) }}">
                             <div class="form-control-focus"> </div>
                         </div>
                     </div>

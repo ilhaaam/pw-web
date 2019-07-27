@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Models\Service;
 use App\Models\Transfer;
-use Huludini\PerfectWorldAPI\API;
+use Ham\PerfectWorldAPI\API;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -147,6 +147,7 @@ class ServicesController extends Controller
                     if ( $role_data['status']['level2'] != 0 )
                     {
                         $role_data['status']['level2'] = ( $role_data['status']['level2'] == 22 ) ? 32 : 22;
+                        $role_data['status']['skills'] = "050000009e000000000000000a0000009f000000000000000a000000a0000000000000000a000000a1000000000000000a000000a70000000000000001000000";
 
                         if ( $api->putRole( $role, $role_data ) )
                         {

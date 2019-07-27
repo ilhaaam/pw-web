@@ -77,6 +77,16 @@
                     @endif
                 @endif
             @endforeach
+            <li class="visible-xs">
+                <a href="{{ url( '/' ) }}" target="_blank">
+                    <i class="icon-home"></i> {{ trans( 'main.site' ) }}
+                </a>
+            </li>
+            <li class="visible-xs">
+                <a href="{{ url( 'auth/logout' ) }}">
+                    <i class="icon-logout"></i> {{ trans( 'main.logout' ) }}
+                </a>
+            </li>
         </ul>
     </div>
 </div>

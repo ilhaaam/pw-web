@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Models\Voucher;
 use App\Models\VoucherLog;
-use Huludini\PerfectWorldAPI\API;
+use Ham\PerfectWorldAPI\API;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;

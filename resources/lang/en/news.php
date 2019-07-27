@@ -35,6 +35,9 @@ return [
     'edit_success' => 'Your changes have been saved!',
     'remove_success' => 'Your article have been removed!',
     'articles_per_page' => 'Aricles Per Page',
-    'articles_per_page_desc' => 'The number of articles to display per page.'
-
+    'articles_per_page_desc' => 'The number of articles to display per page.',
+    'author' => 'Author: ',
+    'written_by' => 'Written by:',
+    'on' => 'on'
+    
 ];

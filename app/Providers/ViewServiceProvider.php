@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use App\Models\Application;
 use App\Models\User;
-use Huludini\PerfectWorldAPI\API;
+use Ham\PerfectWorldAPI\API;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;

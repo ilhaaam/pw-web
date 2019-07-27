@@ -34,6 +34,8 @@ return [
         ]
     ],
     'registration_coin' => 'Registrasi Koin',
-    'registration_coin_desc' => 'Koin yang akan diberikan saat Pemain mendaftar. ( Set 0 untuk mematikan )'
+    'registration_coin_desc' => 'Koin yang akan diberikan saat Pemain mendaftar. ( Set 0 untuk mematikan )',
+    'backup_path' => 'Lokasi Backup',
+    'pwdata_path' => 'Lokasi PW Data',
 
 ];

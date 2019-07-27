@@ -6,8 +6,8 @@ use App\Models\Faction;
 use App\Models\Player;
 use App\Models\Territory;
 use App\Models\User;
-use Huludini\PerfectWorldAPI\API;
-use Huludini\PerfectWorldAPI\Gamed;
+use Ham\PerfectWorldAPI\API;
+use Ham\PerfectWorldAPI\Gamed;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;

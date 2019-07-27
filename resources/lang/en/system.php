@@ -34,6 +34,8 @@ return [
         ]
     ],
     'registration_coin' => 'Registration Coin',
-    'registration_coin_desc' => 'Coins that will be given when the user registers. ( Set 0 to disable )'
+    'registration_coin_desc' => 'Coins that will be given when the user registers. ( Set 0 to disable )',
+    'backup_path' => 'Backup Path',
+    'pwdata_path' => 'PW Data Path',
 
 ];

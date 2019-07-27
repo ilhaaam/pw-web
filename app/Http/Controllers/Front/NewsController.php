@@ -26,8 +26,9 @@ class NewsController extends Controller
 
     public function author( $author )
     {
+        $id = base64_decode( $author );
         pagetitle( [ trans( 'main.apps.news' ), settings( 'server_name' ) ] );
-        $articles = Article::where( 'author', $author )->orderBy( 'created_at', 'desc' )->paginate( settings( 'news_items_per_page' ) );
+        $articles = Article::where( 'author', $id )->orderBy( 'created_at', 'desc' )->paginate( settings( 'news_items_per_page' ) );
         return view( 'front.news.index', compact( 'articles' ) );
     }
 

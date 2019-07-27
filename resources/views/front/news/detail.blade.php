@@ -18,11 +18,11 @@
                 {!! $article->content !!}
                 
                 <small class="bold">
-                    Writted by:
-                    <a href="{{ url( '/news/author/' .  $article->author ) }}">
+                    {{ trans('news.written_by') }} 
+                    <a href="{{ url( '/news/author/' .  $article->hide( $article->author) ) }}">
                         <span>{{ $article->author($article->author) }}</span>
                     </a>
-                    on 
+                    {{ trans('news.on') }} 
                     {{ $article->created_at->toFormattedDateString() }}
                 </small>
             </div>

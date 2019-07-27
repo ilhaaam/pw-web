@@ -11,18 +11,16 @@
             </a>
             <div class="portlet-title">
                 <div class="caption">
-                    <a href="{{ url( '/news/post' ) . '/' . $article->slug }}">
+                    <a href="{{ url( '/news/post' ) . '/' . $article->slug }}" data-toggle="tooltip" data-placement="top" title="Click me Senpai!">
                         <span class="caption-subject text-{{ $article->color( $article->category ) }} bold text-capitalize">{{ $article->title }}</span>
                     </a>
                 </div>
             </div>
             <div class="portlet-body">
-                {!! substr($article->content, 0, 210) !!}....
-                <a href="{{ url( 'news/post' ) . '/' . $article->slug }}"> Read more</a>
-                <p></p>
+                
                 <small class="bold">
-                    {{ $article->created_at->toFormattedDateString() }} / 
-                    <a href="{{ url( '/news/author/' .  $article->author ) }}">
+                    {{ $article->created_at->toFormattedDateString() }} / {{ trans('news.author') }} 
+                    <a href="{{ url( '/news/author/' . $article->hide( $article->author) ) }}">
                         <span class="text-primary">{{ $article->author($article->author) }}</span>
                     </a>
                 </small>

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Huludini\PerfectWorldAPI\API;
+use Ham\PerfectWorldAPI\API;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;

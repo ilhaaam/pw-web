@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Huludini\PerfectWorldAPI\API;
+use Ham\PerfectWorldAPI\API;
 
 class ServerOnline
 {

@@ -149,7 +149,8 @@ return [
          * Additional Server Providers...
          */
         App\Providers\ViewServiceProvider::class,
-        Huludini\PerfectWorldAPI\ServiceProvider::class,
+        Ham\PerfectWorldAPI\ServiceProvider::class,
+        // Huludini\PerfectWorldAPI\ServiceProvider::class,
         App\Providers\HashServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Efriandika\LaravelSettings\SettingsServiceProvider::class,

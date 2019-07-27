@@ -18,7 +18,6 @@ class Kernel extends HttpKernel
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         \App\Http\Middleware\VerifyCsrfToken::class,
-        \App\Http\Middleware\NotInstalled::class,
         \App\Http\Middleware\ApplicationEnabled::class,
         \App\Http\Middleware\EmptyCharacterIfServerOffline::class,
         \App\Http\Middleware\SetLanguage::class
@@ -37,7 +36,6 @@ class Kernel extends HttpKernel
         'selected.character' => \App\Http\Middleware\SelectedCharacter::class,
         'service.enabled' => \App\Http\Middleware\ServiceEnabled::class,
         'server.online' => \App\Http\Middleware\ServerOnline::class,
-        'installed' => \App\Http\Middleware\IsInstalled::class,
         'admin' => \App\Http\Middleware\IsAdmin::class
     ];
 }

@@ -32,4 +32,11 @@ class Article extends Model
         return ( $user ) ? $user->truename : 'Unknown';
     }
 
+    public function hide( $author )
+    {
+        $encode = base64_encode( $author );
+
+        return str_replace( '=', '', $encode );
+    }
+
 }

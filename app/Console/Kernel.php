@@ -8,7 +8,7 @@ use App\Models\Territory;
 use App\Models\Transfer;
 use App\Models\User;
 use Carbon\Carbon;
-use Huludini\PerfectWorldAPI\API;
+use Ham\PerfectWorldAPI\API;
 use Huludini\PerfectWorldAPI\Gamed;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -133,7 +133,7 @@ class Kernel extends ConsoleKernel
                     }
                 }
             }
-        })->everyTenMinutes();
+        })->everyThirtyMinutes();
 
         /*
          * Update Factions
@@ -253,17 +253,22 @@ class Kernel extends ConsoleKernel
          * Backup PW Data ( Role and Database )
          */
         $schedule->call(function () {
-            $datetime = date("h-i_h-m-Y");
+            $datetime = date("H-i_d-m-Y");
 
             $pw_path = settings( 'pwdata_path' );
             $backup_path = settings( 'backup_path' );
+            
+            $db_name = env('DB_DATABASE');
+            $db_user = env('DB_USERNAME');
+            $db_pass = env('DB_PASSWORD');
 
-            shell_exec( 'mysqldump -u'. env('DB_USERNAME') .' -p'. env('DB_PASSWORD') .' '. env('DB_DATABASE') .' --routines > '. $pw_path .'/pw_data_'. $datetime .'.sql' );
+            shell_exec('rm -rf ' . $backup_path . '/*');
+            shell_exec( 'mysqldump -u'. $db_user .' -p'. $db_pass .' '. $db_name .' --routines > '. $pw_path .'/pw_data_'. $datetime .'.sql' );
             shell_exec( '7z a '. $backup_path .'/pw_backup_'. $datetime .'.7z '. $pw_path );
             shell_exec( 'rm -rf '. $pw_path .'/*.sql' );
 
             unset( $datetime );
-        })->twiceDaily(1, 13);
+        })->everyThirtyMinutes();
     }
 
     protected function getFactionStat( $fid, $stat, $total = 0 )

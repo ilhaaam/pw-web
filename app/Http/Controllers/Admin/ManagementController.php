@@ -6,7 +6,7 @@ use App\Models\User;
 use App\Models\Player;
 use App\Models\Faction;
 use Efriandika\LaravelSettings\Facades\Settings;
-use Huludini\PerfectWorldAPI\API;
+use Ham\PerfectWorldAPI\API;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -320,7 +320,7 @@ class ManagementController extends Controller
     {
         Settings::set( 'chat_log_path', $request->log_path );
 
-        Settings::set( 'chat_num_row', $request->num_row );
+        Settings::set( 'chat_num_rows', $request->num_rows );
 
         flash()->success( trans( 'main.settings_saved' ) );
 
